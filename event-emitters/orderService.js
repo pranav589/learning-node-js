@@ -24,7 +24,8 @@ export class OrderService extends EventEmitter {
     //if success
     // Event Emitted
     this.emit("order:created", orderData);
-
+    // Sync call
+    console.log("after emit");
     return { id: Date.now().toString(), ...orderData };
   }
 }
